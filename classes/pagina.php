@@ -21,20 +21,20 @@
         switch ($this->pagina)
         {
           case 0:
-            echo "Página Inicial";
+            include "./paginas/principal.php";
             break;
 
 
           case 1:
-            echo "Página de consulta";
+            include "./paginas/consultar_aluno.php";
             break;
 
           case 2:
-            echo "Página de cadastro de Aluno";
+            include "./paginas/cadastrar_aluno.php";
             break;
 
           case 3:
-            echo "Página de cadastro de Candidato";
+            include "./paginas/cadastrar_candidato.php";
             break;
         }
 

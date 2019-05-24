@@ -24,7 +24,7 @@
     <div class="container">
 
       <!-- Menu superior -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light mb-2">
         <!-- logotipo -->
         <a class="navbar-brand" href="index.php"><b>SGE 2019</b></a>
         <!-- Menu móvel -->
