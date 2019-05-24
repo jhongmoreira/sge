@@ -1,1 +1,10 @@
-.jumbotron{background-color: red !important; padding: 1em !important; height: 120px;}
+.nav-cor{background-color: darkred !important; color: white !important;}
+.nav-cor a{color: white !important;}
+.dropdown-menu a{color: darkred !important;}
+.dropdown-menu a:focus{background-color: darkred !important; color: white !important;}
+.cxs-resumo{padding: 1em !important; min-height: 140px;}
+.div-tema-padrao{background-color: darkred !important; color: white !important;}
+.div-tema-estoque-ativo{background-color: #a82100 !important; color: white !important;}
+.div-tema-estoque-desatualizado{background-color: #7a4646 !important; color: white !important;}
+.btn-detalhes-matriculados{background-color: darkred; border: solid thin white; color: darkred !important; font-weight: 500 !important;}
+.cor-txt-padrao{color: darkred !important;}

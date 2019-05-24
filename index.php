@@ -24,7 +24,7 @@
     <div class="container">
 
       <!-- Menu superior -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light mb-2">
+      <nav class="navbar navbar-expand-lg navbar-light mb-3 nav-cor">
         <!-- logotipo -->
         <a class="navbar-brand" href="index.php"><b>SGE 2019</b></a>
         <!-- Menu móvel -->
@@ -51,7 +51,7 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Relatórios</a>
+              <a class="nav-link active" href="#">Relatórios</a>
             </li>
           </ul>
         </div>
