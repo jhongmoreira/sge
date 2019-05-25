@@ -1,3 +1,8 @@
+<?php
+  require_once("classes/database.php");
+  $banco = new BancoDeDados;
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
   <head>
@@ -54,6 +59,10 @@
               <a class="nav-link active" href="#">Relatórios</a>
             </li>
           </ul>
+
+          <div class="mr-sm-2">
+            <b>Bem vindo</b>, Jhonathan <a href="#"><li class="fa fa-sign-out-alt"></li></a>
+          </div>
         </div>
       </nav>
 

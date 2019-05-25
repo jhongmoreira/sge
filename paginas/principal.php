@@ -25,7 +25,7 @@
   <!-- Número de estoque ativo -->
   <div class="col-md-4">
     <div class="jumbotron cxs-resumo div-tema-estoque-ativo">
-      <h5><li class="fa fa-id-card"></li> Candidatos Ativo</h5>
+      <h5><li class="fa fa-id-card"></li> Candidatos Ativos</h5>
       <span>8 candidatos atualizados</span>
       <div class="row mt-2">
         <div class="col-md-7"></div>
@@ -51,3 +51,35 @@
   </div>
 
 </div>
+
+<!-- Linha outros detalhes -->
+<div class="row">
+  <!-- Últimas movimentações realizadas -->
+  <div class="col-md-6">
+    <div class="jumbotron cxs-resumo div-tema-padrao">
+      <h5><li class="fa fa-clock"></li> Ultimas movimentações</h5>
+      <ul class="fa-ul listas-sistemas-principal">
+        <li><span class="fa-li"><i class="fa fa-arrow-circle-right"></i></span>24/05/19 - 19:22 - Teste excluiu um registro de Clientes</li>
+        <li><span class="fa-li"><i class="fa fa-arrow-circle-right"></i></span>24/05/19 - 19:20 - Administrador alterou as permissões de Administrador</li>
+        <li><span class="fa-li"><i class="fa fa-arrow-circle-right"></i></span>24/05/19 - 19:16 - Administrador alterou configurações do sistema</li>
+        <li><span class="fa-li"><i class="fa fa-arrow-circle-right"></i></span>24/05/19 - 19:15 - Administrador inseriou um novo registro em candidatos</li>
+        <li><span class="fa-li"><i class="fa fa-arrow-circle-right"></i></span>24/05/19 - 19:11 - Administrador deletou o usuário Teste</li>
+        <li><span class="fa-li"><i class="fa fa-arrow-circle-right"></i></span>24/05/19 - 19:10 - Administrador criou um novo usuário</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Histórico de logins -->
+  <div class="col-md-6">
+    <div class="jumbotron cxs-resumo div-tema-padrao">
+      <h5><li class="fa fa-history"></li> Logins anteriores</h5>
+      <ul class="fa-ul listas-sistemas-principal">
+        <li><span class="fa-li"><i class="fa fa-arrow-circle-right"></i></span>24/05/19 - 19:05 - Administrador iniciou sessão</li>
+        <li><span class="fa-li"><i class="fa fa-arrow-circle-right"></i></span>24/05/19 - 19:05 - Teste iniciou sessão</li>
+        <li><span class="fa-li"><i class="fa fa-arrow-circle-right"></i></span>24/05/19 - 19:00 - Teste encerrou sessão</li>
+        <li><span class="fa-li"><i class="fa fa-arrow-circle-right"></i></span>24/05/19 - 19:00 - Teste iniciou sessão</li>
+        <li><span class="fa-li"><i class="fa fa-arrow-circle-right"></i></span>24/05/19 - 19:00 - Administrador encerrou sessão</li>
+        <li><span class="fa-li"><i class="fa fa-arrow-circle-right"></i></span>24/05/19 - 18:58 - Administrador iniciou sessão</li>
+      </ul>
+    </div>
+  </div>
