@@ -1,5 +1,5 @@
 <?php
-  require_once("classes/database.php");
+  include("classes/database.php");
   $banco = new BancoDeDados;
 ?>
 

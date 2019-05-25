@@ -31,7 +31,7 @@
       {
         $query = $this->pdo->query($sql);
         $this->linhas = $query->rowCount();
-        $this->$array_dados = $query->fetchAll();
+        $this->array_dados = $query->fetchAll();
       }
 
       public function linhas()
@@ -41,7 +41,7 @@
 
       public function result()
       {
-        return $thits->array_dados;
+        return $this->array_dados;
       }
 
     }

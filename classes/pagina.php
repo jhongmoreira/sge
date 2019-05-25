@@ -3,7 +3,7 @@
   {
       private $pagina;
 
-      function __construct()
+      public function __construct()
       {
         if (!isset($_GET["pg"]))
         {
