@@ -64,7 +64,7 @@
 
           if ($acao == 'listar-todos')
           {
-            $banco->query("SELECT id, nome, celular, whatsapp FROM alunos");
+            $banco->query("SELECT id, nome, celular, whatsapp FROM alunos ORDER BY id");
             $msg = "Exibindo <b>todos</b> os alunos ativos/inativos";
           }
 
@@ -77,7 +77,7 @@
 
           if ($acao == '')
           {
-            $banco->query("SELECT id, nome, celular, whatsapp FROM alunos WHERE ativo = 1 LIMIT 10");
+            $banco->query("SELECT id, nome, celular, whatsapp FROM alunos WHERE ativo = 1 ORDER BY id LIMIT 10");
             $msg = "Exibindo no máximo <b>10 regitros</b> e somente alunos <b>Ativos</b>";
           }
 
@@ -92,7 +92,11 @@
                   <td><?php echo $dados['nome']; ?></td>
                   <td><?php echo $dados['celular']; ?></td>
                   <td><?php echo $dados['whatsapp']; ?></td>
-                  <td style="text-align: center;"><a href="#"><li class="fa fa-edit"></li></a>  <a href="#"><li class="fa fa-trash-alt"></li></a></td>
+                  <td style="text-align: center;">
+                    <a href="index.php?pg=3&aluno=<?php echo $dados['id']; ?>"><button class="btn btn-warning"> <li class="fa fa-edit txt-branco"></li></a></button>
+                    <a href="index.php?pg=4&aluno=<?php echo $dados['id']; ?>"><button class="btn btn-danger"> <li class="fa fa-trash-alt txt-branco"></li></button></a>
+                    <a href="index.php?pg=5&aluno=<?php echo $dados['id']; ?>"><button class="btn btn-info"> <li class="fa fa-eye txt-branco"></li></button></a>
+                  </td>
           </tr>
             <?php
                 }

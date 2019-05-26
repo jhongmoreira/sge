@@ -34,7 +34,15 @@
             break;
 
           case 3:
-            include "./paginas/cadastrar_candidato.php";
+            include "./paginas/editar_aluno.php";
+            break;
+
+          case 4:
+            include "./paginas/apagar_aluno.php";
+            break;
+
+          case 5:
+            include "./paginas/detalhes_aluno.php";
             break;
         }
 
