@@ -81,23 +81,6 @@
             $msg = "Exibindo no máximo <b>10 regitros</b> e somente alunos <b>Ativos</b>";
           }
 
-            /*if (!isset($_GET['listar-todos']))
-            {
-              $banco->query("SELECT id, nome, celular, whatsapp FROM alunos WHERE ativo = 1 LIMIT 10");
-              $msg = "Exibindo no máximo <b>10 regitros</b> e somente alunos <b>Ativos</b>";
-            }else
-            {
-              if (isset($_GET['busca-nome']))
-              {
-                $nome_aluno = $_GET["nome"];
-                $banco->query("SELECT id, nome, celular, whatsapp FROM alunos WHERE nome = '$nome_aluno'");
-
-              //$banco->query("SELECT id, nome, celular, whatsapp FROM alunos");
-              //$msg = "Exibindo <b>todos</b> os alunos ativos/inativos";
-
-              }
-            }*/
-
               $total = $banco->linhas();
 
               if ($total != 0)
