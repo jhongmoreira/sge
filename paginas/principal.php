@@ -1,3 +1,6 @@
+<?php
+  $banco = new BancoDeDados;
+ ?>
 <!-- Título -->
 <div class="row p-2">
   <div class="col-md-12 cor-txt-padrao">
@@ -7,22 +10,31 @@
 </div>
 
 <!-- Linha de resumos -->
+<?php
+  $banco->query("SELECT * FROM alunos where ativo = 1");
+  $total = $banco->linhas();
+?>
 <div class="row">
   <!-- Número de alunos ativos -->
   <div class="col-md-4">
     <div class="jumbotron cxs-resumo div-tema-padrao">
       <h5><li class="fa fa-user"></li> Alunos matriculados</h5>
-      <span>10 alunos cadastrados</span>
+      <span><?php echo $total; ?> alunos cadastrados</span>
       <div class="row mt-2">
         <div class="col-md-7"></div>
         <div class="col-md-5">
-          <button class="form-control btn btn-detalhes-matriculados"><li class="fa fa-plus"></li> Detalhes</button>
+          <a href="index.php?pg=1"><button class="form-control btn btn-detalhes-matriculados"><li class="fa fa-plus"></li> Detalhes</button></button></a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Número de estoque ativo -->
+  <div class="col-md-4"></div>
+
+  <div class="col-md-4"></div>
+
+  <!-- Implementar Depois
+  -- Número de estoque ativo --
   <div class="col-md-4">
     <div class="jumbotron cxs-resumo div-tema-estoque-ativo">
       <h5><li class="fa fa-id-card"></li> Candidatos Ativos</h5>
@@ -36,7 +48,7 @@
     </div>
   </div>
 
-  <!-- Número de estoque desatualizados -->
+  -- Número de estoque desatualizados --
   <div class="col-md-4">
     <div class="jumbotron cxs-resumo div-tema-estoque-desatualizado">
       <h5><li class="fa fa-thumbs-down"></li> Candidatos Desatualizados</h5>
@@ -52,9 +64,9 @@
 
 </div>
 
-<!-- Linha outros detalhes -->
+-- Linha outros detalhes --
 <div class="row">
-  <!-- Últimas movimentações realizadas -->
+  -- Últimas movimentações realizadas --
   <div class="col-md-6">
     <div class="jumbotron cxs-resumo div-tema-padrao">
       <h5><li class="fa fa-clock"></li> Ultimas movimentações</h5>
@@ -69,7 +81,7 @@
     </div>
   </div>
 
-  <!-- Histórico de logins -->
+  -- Histórico de logins --
   <div class="col-md-6">
     <div class="jumbotron cxs-resumo div-tema-padrao">
       <h5><li class="fa fa-history"></li> Logins anteriores</h5>
@@ -83,3 +95,4 @@
       </ul>
     </div>
   </div>
+-->
