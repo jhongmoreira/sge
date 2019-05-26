@@ -1,4 +1,5 @@
 <?php
+  include_once("includes/verificar_login.php");
   include("classes/database.php");
   $banco = new BancoDeDados;
 ?>
@@ -61,7 +62,7 @@
           </ul>
 
           <div class="mr-sm-2">
-            <b>Bem vindo</b>, Jhonathan <a href="#"><li class="fa fa-sign-out-alt"></li></a>
+            <b>Bem vindo</b>, Jhonathan <a href="includes/logout.php"><li class="cor-branca fa fa-sign-out-alt"></li></a>
           </div>
         </div>
       </nav>

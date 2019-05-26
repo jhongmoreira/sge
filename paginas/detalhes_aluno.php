@@ -4,7 +4,6 @@
   $alunoId = $_GET['aluno'];
   $banco->query("SELECT * FROM alunos where id = ".$alunoId);
   foreach ($banco->result() as $dados) {}
-
 ?>
 
 <!-- Título -->
@@ -43,17 +42,31 @@
 <div class="row mb-2">
   <div class="col-md-2 mb-2">
       <label class="label-detalhes mb-0" for="telefone">Telefone:</label>
-        <div id="telefone"><?php echo $dados["telefone"]; ?></div>
+        <div id="telefone"><?php echo @formatar('(%s%s) %s%s%s%s-%s%s%s%s', $dados["telefone"]); ?></div>
   </div>
 
   <div class="col-md-3 mb-2">
       <label class="label-detalhes mb-0" for="celular">Celular:</label>
-        <div id="celular"><?php echo $dados["celular"]; ?> </div>
+        <div id="celular"><?php echo @formatar('(%s%s) %s%s%s%s%s-%s%s%s%s', $dados["celular"]); ?> </div>
   </div>
 
   <div class="col-md-3 mb-2">
       <label class="label-detalhes mb-0" for="whatsapp">Whastapp:</label>
-        <div id="whatsapp"><?php echo $dados["whatsapp"]; ?></div>
+        <div id="whatsapp"><?php echo @formatar('(%s%s) %s%s%s%s%s-%s%s%s%s', $dados["whatsapp"]); ?>
+
+          <?php
+            if ($dados["whatsapp"] != 0)
+            {
+          ?>
+              <a alt="Abrir em Whatsapp Web" target="_blank" href="https://api.whatsapp.com/send?phone=55<?php echo $dados['whatsapp']; ?>"><li class="fa fa-external-link-alt"></li>
+              </a>
+          <?php
+        }else {
+          echo "<i>Não inserido</i>";
+        }
+          ?>
+
+        </div>
   </div>
 
   <div class="col-md-4 mb-2">

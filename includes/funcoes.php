@@ -1,10 +1,10 @@
- <?php 
+ <?php
 
-    function format($mask,$string){
+    function formatar($mask,$string){
         {
             return  vsprintf($mask, str_split($string));
         }
-    }    
+    }
 
     function verificaAdm($permissao, $html, $limitado){
         if ($permissao == "A"){
