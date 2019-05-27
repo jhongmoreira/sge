@@ -24,6 +24,8 @@
     <script src="bootstrap/fontawesome/js/regular.js"></script>
     <script src="bootstrap/fontawesome/js/solid.js"></script>
 
+
+
   </head>
   <!-- Corpo do site -->
   <body>
@@ -80,5 +82,4 @@
   <!-- Arquivos jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
-
   </html>

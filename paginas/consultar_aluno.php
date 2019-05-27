@@ -1,5 +1,13 @@
 <?php
   $banco = new BancoDeDados;
+
+  $lista = (isset($_GET['lista']))? $_GET['lista'] : 1;
+  $banco->query("select * from alunos");
+  $total = $banco->linhas();
+  $registros = 10;
+  $numPaginas = ceil($total/$registros);
+  $inicio = ($registros*$lista)-$registros;
+
 ?>
 
 <!-- Título -->
@@ -42,9 +50,9 @@
 
 
   <!-- Tabela -->
-  <table class="table">
+  <table id="exemple" class="table">
     <thead class="cor-txt-padrao">
-      <th scope="col">#</th>
+      <!--<th scope="col">#</th>-->
       <th scope="col">Nome</th>
       <th scope="col">Celular</th>
       <th scope="col">Whatsapp</th>
@@ -64,8 +72,7 @@
 
           if ($acao == 'listar-todos')
           {
-            $banco->query("SELECT id, nome, celular, whatsapp FROM alunos ORDER BY id");
-            $msg = "Exibindo <b>todos</b> os alunos ativos/inativos";
+            $banco->query("SELECT id, nome, celular, whatsapp FROM alunos  ORDER BY id limit $inicio, $registros");
           }
 
           if ($acao == 'busca-nome')
@@ -78,7 +85,6 @@
           if ($acao == '')
           {
             $banco->query("SELECT id, nome, celular, whatsapp FROM alunos WHERE ativo = 1 ORDER BY id LIMIT 10");
-            $msg = "Exibindo no máximo <b>10 regitros</b> e somente alunos <b>Ativos</b>";
           }
 
               $total = $banco->linhas();
@@ -88,10 +94,10 @@
                 foreach ($banco->result() as $dados)
                 {
             ?>
-                  <th scope="row"><?php echo $dados['id']; ?></th>
+                  <!--<th scope="row"><?php /*echo $dados['id']; */?></th>-->
                   <td><?php echo $dados['nome']; ?></td>
                   <td><?php echo $dados['celular']; ?></td>
-                  <td><?php echo $dados['whatsapp']; ?></td>
+                  <td><?php echo $dados['whatsapp']; ?>  <a alt="Abrir em Whatsapp Web" target="_blank" href="https://api.whatsapp.com/send?phone=55<?php echo $dados['whatsapp']; ?>"><li class="fa fa-external-link-alt"></li></a></td>
                   <td style="text-align: center;">
                     <a href="index.php?pg=3&aluno=<?php echo $dados['id']; ?>"><button class="btn btn-warning"> <li class="fa fa-edit txt-branco"></li></a></button>
                     <a href="index.php?pg=4&aluno=<?php echo $dados['id']; ?>"><button class="btn btn-danger"> <li class="fa fa-trash-alt txt-branco"></li></button></a>
@@ -109,15 +115,14 @@
       </tbody>
     </table>
 
-    <div class="row" style="text-align: right;">
+    <div class="mb-5 row" style="text-align: center;">
       <div class="col-md-12">
-        <?php echo $banco->linhas()." registros encontrados";?>
-      </div>
-    </div>
-
-    <div class="row" style="text-align: right;">
-      <div class="col-md-12">
-        <?php echo $msg;?>
+        <?php
+          for($i = 1; $i < $numPaginas + 1; $i++)
+          {
+            echo "<a class='btn btn-info mb-1' href='index.php?pg=1&action=listar-todos&lista=$i'>".$i."</a> ";
+          }
+        ?>
       </div>
     </div>
 
