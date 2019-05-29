@@ -52,7 +52,6 @@
       <th scope="col">Nome</th>
       <th scope="col">Celular</th>
       <th scope="col">Whatsapp</th>
-      <th scope="col" style="text-align: center;">Opções</th>
     </thead>
       <tbody>
         <tr>
@@ -91,15 +90,13 @@
                 {
             ?>
                   <!--<th scope="row"><?php /*echo $dados['id']; */?></th>-->
-                  <td><?php echo $dados['nome']; ?></td>
-                  <td><?php echo $dados['celular']; ?></td>
-                  <td><?php echo $dados['whatsapp']; ?>  <a alt="Abrir em Whatsapp Web" target="_blank" href="https://api.whatsapp.com/send?phone=55<?php echo $dados['whatsapp']; ?>"><li class="fa fa-external-link-alt"></li></a></td>
-                  <td style="text-align: center;">
-                    <a href="index.php?pg=3&candidato=<?php echo $dados['id']; ?>"><button class="btn btn-warning"> <li class="fa fa-edit txt-branco"></li></a></button>
-                    <a href="index.php?pg=4&candidato=<?php echo $dados['id']; ?>"><button class="btn btn-danger"> <li class="fa fa-trash-alt txt-branco"></li></button></a>
-                    <a href="index.php?pg=8&candidato=<?php echo $dados['id']; ?>"><button class="btn btn-info"> <li class="fa fa-eye txt-branco"></li></button></a>
+                  <td><?php echo $dados['nome']; ?><br/>
+                    <a class="cor-warning p-1" href="index.php?pg=3&candidato=<?php echo $dados['id']; ?>"><li class="fa fa-edit"></li></a></button>
+                    <a class="cor-danger p-1" href="index.php?pg=4&candidato=<?php echo $dados['id']; ?>"><li class="fa fa-trash-alt"></li></button></a>
+                    <a class="cor-info p-1" href="index.php?pg=8&candidato=<?php echo $dados['id']; ?>"><li class="fa fa-eye"></li></button></a>
                   </td>
-          </tr>
+                  <td><?php echo $dados['celular']; ?></td>
+                  <td><?php echo $dados['whatsapp']; ?>  <a alt="Abrir em Whatsapp Web" target="_blank" href="https://api.whatsapp.com/send?phone=55<?php echo $dados['whatsapp']; ?>"><li class="fa fa-external-link-alt"></li></a></td>          </tr>
             <?php
                 }
               }else
