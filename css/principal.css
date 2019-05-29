@@ -24,3 +24,6 @@
 .txt-branco{color: white !important;}
 .txt-preto{color: black !important;}
 .label-detalhes{font-weight: bold !important; color: darkred !important; font-size: 1em !important;}
+.cor-danger{color: darkred !important;}
+.cor-info{color: darkblue !important;}
+.cor-warning{color: darkorange !important;}
