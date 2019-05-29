@@ -56,6 +56,10 @@
           case 8:
             include "./paginas/detalhes_candidato.php";
             break;
+
+          case 9:
+            include "./paginas/apagar_candidato.php";
+            break;
         }
 
       }

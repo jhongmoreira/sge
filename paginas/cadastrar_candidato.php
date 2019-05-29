@@ -189,7 +189,7 @@
         if ($total != 0)
         {
           echo "<div class='alert alert-info'>Registro inserido com sucesso</div>";
-          echo "<meta http-equiv='refresh' content='1;URL=index.php?pg=1'/>";
+          echo "<meta http-equiv='refresh' content='1;URL=index.php?pg=7'/>";
         }else
         {
           echo "<div class='alert alert-danger'>Impossível inserir dados.</div>";

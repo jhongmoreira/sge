@@ -92,7 +92,7 @@
                   <!--<th scope="row"><?php /*echo $dados['id']; */?></th>-->
                   <td><?php echo $dados['nome']; ?><br/>
                     <a class="cor-warning p-1" href="index.php?pg=3&candidato=<?php echo $dados['id']; ?>"><li class="fa fa-edit"></li></a></button>
-                    <a class="cor-danger p-1" href="index.php?pg=4&candidato=<?php echo $dados['id']; ?>"><li class="fa fa-trash-alt"></li></button></a>
+                    <a class="cor-danger p-1" href="index.php?pg=9&candidato=<?php echo $dados['id']; ?>"><li class="fa fa-trash-alt"></li></button></a>
                     <a class="cor-info p-1" href="index.php?pg=8&candidato=<?php echo $dados['id']; ?>"><li class="fa fa-eye"></li></button></a>
                   </td>
                   <td><?php echo $dados['celular']; ?></td>
