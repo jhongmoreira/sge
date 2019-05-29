@@ -8,7 +8,7 @@
     color: white !important;
     font-weight: bold !important;
   }
-
+body{margin: 0;}
 .nav-cor{background-color: darkred !important; color: white !important;}
 .nav-cor a{color: white !important;}
 .dropdown-menu a{color: darkred !important;}

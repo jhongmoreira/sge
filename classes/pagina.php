@@ -60,6 +60,14 @@
           case 9:
             include "./paginas/apagar_candidato.php";
             break;
+
+          case 10:
+            include "./paginas/novo_mv_aluno.php";
+            break;
+
+          case 11:
+            include "./paginas/novo_mv_candidato.php";
+            break;
         }
 
       }

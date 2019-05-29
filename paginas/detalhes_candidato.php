@@ -107,3 +107,44 @@
       </div>
   </div>
 </div>
+
+<!-- Tabela -->
+<div class="row mt-5">
+  <div class="col-md-12">
+    <h5 class="cor-txt-padrao"><li class="fa fa-clock"></li> Ultimas movimentações</h5>
+<table id="exemple" class="table">
+  <thead class="cor-txt-padrao">
+    <!--<th scope="col">#</th>-->
+    <th scope="col">Data</th>
+    <th scope="col">Hora</th>
+    <th scope="col">Movimentação</th>
+  </thead>
+    <tbody>
+      <tr>
+      <?php
+          $banco->query("SELECT * FROM mv_estoque WHERE id_cand = '$alunoId'");
+
+          $total = $banco->linhas();
+
+            if ($total != 0)
+            {
+              foreach ($banco->result() as $dados)
+              {
+          ?>
+                <!--<th scope="row"><?php /*echo $dados['id']; */?></th>-->
+                <td><?php echo $dados['data_mv']; ?></td>
+                <td><?php echo $dados['hora_mv']; ?></td>
+                <td><?php echo $dados['movimento']; ?></td>
+        </tr>
+          <?php
+              }
+            }else
+            {
+              echo "Nada encontrado";
+            }
+      ?>
+      <tr>
+    </tbody>
+  </table>
+</div>
+</div>

@@ -30,10 +30,10 @@
   <!-- Corpo do site -->
   <body>
 
-    <div class="container">
+    <div class="container-fluid">
 
       <!-- Menu superior -->
-      <nav class="navbar navbar-expand-lg navbar-light mb-3 nav-cor">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light mb-3 nav-cor">
         <!-- logotipo -->
         <a class="navbar-brand" href="index.php"><b>SGE 2019</b></a>
         <!-- Menu móvel -->
@@ -69,6 +69,18 @@
                 <a class="dropdown-item" href="index.php?pg=6">Candidato</a>
               </div>
             </li>
+
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Movimentações
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="index.php?pg=10">p/ Aluno</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="index.php?pg=11">p/ Candidato</a>
+              </div>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link active" href="#">Relatórios</a>
             </li>
