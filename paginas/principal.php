@@ -29,26 +29,27 @@
     </div>
   </div>
 
-  <div class="col-md-4"></div>
-
-  <div class="col-md-4"></div>
-
-  <!-- Implementar Depois
-  -- Número de estoque ativo --
+  <!-- Número de estoque ativo -->
+  <?php
+    $banco->query("SELECT * FROM candidatos where ativo = 1");
+    $total = $banco->linhas();
+  ?>
   <div class="col-md-4">
     <div class="jumbotron cxs-resumo div-tema-estoque-ativo">
       <h5><li class="fa fa-id-card"></li> Candidatos Ativos</h5>
-      <span>8 candidatos atualizados</span>
+      <span><?php echo $total; ?> candidatos atualizados</span>
       <div class="row mt-2">
         <div class="col-md-7"></div>
         <div class="col-md-5">
-          <button class="form-control btn btn-detalhes-matriculados"><li class="fa fa-plus"></li> Detalhes</button>
+            <a href="index.php?pg=7"><button class="form-control btn btn-detalhes-matriculados"><li class="fa fa-plus"></li> Detalhes</button></a>
         </div>
       </div>
     </div>
   </div>
 
-  -- Número de estoque desatualizados --
+  <div class="col-md-4"></div>
+
+  <!-- Número de estoque desatualizados --
   <div class="col-md-4">
     <div class="jumbotron cxs-resumo div-tema-estoque-desatualizado">
       <h5><li class="fa fa-thumbs-down"></li> Candidatos Desatualizados</h5>

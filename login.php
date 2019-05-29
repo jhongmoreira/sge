@@ -3,6 +3,7 @@
   session_start();
 
   include_once("classes/database.php");
+  include_once("includes/logar.php");
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +20,7 @@
 </head>
 
 <!-- Corpo do site -->
-<body class="p-3 pr-4">
+<body class="p-3 pr-4 login-fundo" >
   <form method="post">
     <div class="row">
       <div class="col-md-6"></div>
@@ -49,5 +50,3 @@
   </form>
 </body>
 </html>
-
-<?php include_once("includes/logar.php"); ?>

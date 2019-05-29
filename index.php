@@ -46,8 +46,18 @@
             <li class="nav-item active">
               <a class="nav-link" href="index.php?pg=0">Home</a>
             </li>
-            <li class="nav-item active">
+            <!--<li class="nav-item active">
               <a class="nav-link" href="index.php?pg=1">Consultas</a>
+            </li>-->
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Consultar
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="index.php?pg=1">Aluno</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="index.php?pg=7">Candidato</a>
+              </div>
             </li>
             <li class="nav-item dropdown active">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -56,7 +66,7 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="index.php?pg=2">Aluno</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="index.php?pg=3">Candidato</a>
+                <a class="dropdown-item" href="index.php?pg=6">Candidato</a>
               </div>
             </li>
             <li class="nav-item">
@@ -65,7 +75,7 @@
           </ul>
 
           <div class="mr-sm-2">
-            <b>Bem vindo</b>, Jhonathan <a href="includes/logout.php"><li class="cor-branca fa fa-sign-out-alt"></li></a>
+            <b>Bem vindo</b>, <?php echo $_SESSION["nomeCompletoUsrS"];?> <a href="includes/logout.php"><li class="cor-branca fa fa-sign-out-alt"></li></a>
           </div>
         </div>
       </nav>

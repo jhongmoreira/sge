@@ -2,7 +2,7 @@
   $banco = new BancoDeDados;
 
   $lista = (isset($_GET['lista']))? $_GET['lista'] : 1;
-  $banco->query("select * from alunos");
+  $banco->query("select * from candidatos");
   $total = $banco->linhas();
   $registros = 10;
   $numPaginas = ceil($total/$registros);
@@ -68,19 +68,19 @@
 
           if ($acao == 'listar-todos')
           {
-            $banco->query("SELECT id, nome, celular, whatsapp FROM alunos  ORDER BY id limit $inicio, $registros");
+            $banco->query("SELECT id, nome, celular, whatsapp FROM candidatos  ORDER BY id limit $inicio, $registros");
           }
 
           if ($acao == 'busca-nome')
             {
               @$nome_aluno = $_POST["nome"];
-              $banco->query("SELECT id, nome, celular, whatsapp FROM alunos WHERE nome LIKE '%".$nome_aluno."%'");
+              $banco->query("SELECT id, nome, celular, whatsapp FROM candidatos WHERE nome LIKE '%".$nome_aluno."%'");
               $msg = '';
             }
 
           if ($acao == '')
           {
-            $banco->query("SELECT id, nome, celular, whatsapp FROM alunos WHERE ativo = 1 ORDER BY id LIMIT 10");
+            $banco->query("SELECT id, nome, celular, whatsapp FROM candidatos WHERE ativo = 1 ORDER BY id LIMIT 10");
           }
 
               $total = $banco->linhas();
@@ -95,9 +95,9 @@
                   <td><?php echo $dados['celular']; ?></td>
                   <td><?php echo $dados['whatsapp']; ?>  <a alt="Abrir em Whatsapp Web" target="_blank" href="https://api.whatsapp.com/send?phone=55<?php echo $dados['whatsapp']; ?>"><li class="fa fa-external-link-alt"></li></a></td>
                   <td style="text-align: center;">
-                    <a href="index.php?pg=3&aluno=<?php echo $dados['id']; ?>"><button class="btn btn-warning"> <li class="fa fa-edit txt-branco"></li></a></button>
-                    <a href="index.php?pg=4&aluno=<?php echo $dados['id']; ?>"><button class="btn btn-danger"> <li class="fa fa-trash-alt txt-branco"></li></button></a>
-                    <a href="index.php?pg=5&aluno=<?php echo $dados['id']; ?>"><button class="btn btn-info"> <li class="fa fa-eye txt-branco"></li></button></a>
+                    <a href="index.php?pg=3&candidato=<?php echo $dados['id']; ?>"><button class="btn btn-warning"> <li class="fa fa-edit txt-branco"></li></a></button>
+                    <a href="index.php?pg=4&candidato=<?php echo $dados['id']; ?>"><button class="btn btn-danger"> <li class="fa fa-trash-alt txt-branco"></li></button></a>
+                    <a href="index.php?pg=8&candidato=<?php echo $dados['id']; ?>"><button class="btn btn-info"> <li class="fa fa-eye txt-branco"></li></button></a>
                   </td>
           </tr>
             <?php

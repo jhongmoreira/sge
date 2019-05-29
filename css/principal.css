@@ -1,3 +1,14 @@
+.login-fundo
+  {
+    width: 100%;
+    background: url(../img/fundo.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    color: white !important;
+    font-weight: bold !important;
+  }
+
 .nav-cor{background-color: darkred !important; color: white !important;}
 .nav-cor a{color: white !important;}
 .dropdown-menu a{color: darkred !important;}

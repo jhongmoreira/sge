@@ -44,6 +44,18 @@
           case 5:
             include "./paginas/detalhes_aluno.php";
             break;
+
+          case 6:
+            include "./paginas/cadastrar_candidato.php";
+            break;
+
+          case 7:
+            include "./paginas/consultar_candidato.php";
+            break;
+
+          case 8:
+            include "./paginas/detalhes_candidato.php";
+            break;
         }
 
       }
