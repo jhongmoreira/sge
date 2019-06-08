@@ -68,6 +68,10 @@
           case 11:
             include "./paginas/novo_mv_candidato.php";
             break;
+
+          case 12:
+            include "./paginas/editar_candidato.php";
+            break;
         }
 
       }

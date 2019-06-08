@@ -1,6 +1,6 @@
 <?php
   $banco = new BancoDeDados;
-
+  include_once("includes/funcoes.php");
   $lista = (isset($_GET['lista']))? $_GET['lista'] : 1;
   $banco->query("select * from alunos");
   $total = $banco->linhas();
@@ -95,8 +95,8 @@
                     <a class="cor-danger p-1" href="index.php?pg=4&aluno=<?php echo $dados['id']; ?>"><li class="fa fa-trash-alt"></li></button></a>
                     <a class="cor-info p-1" href="index.php?pg=5&aluno=<?php echo $dados['id']; ?>"><li class="fa fa-eye"></li></button></a>
                   </td>
-                  <td><?php echo $dados['celular']; ?></td>
-                  <td><?php echo $dados['whatsapp']; ?>  <a alt="Abrir em Whatsapp Web" target="_blank" href="https://api.whatsapp.com/send?phone=55<?php echo $dados['whatsapp']; ?>"><li class="fa fa-external-link-alt"></li></a></td>
+                  <td><?php echo @formatar('(%s%s) %s%s%s%s%s-%s%s%s%s', $dados['celular']); ?></td>
+                  <td><?php echo @formatar('(%s%s) %s%s%s%s%s-%s%s%s%s', $dados['whatsapp']); ?>  <a alt="Abrir em Whatsapp Web" target="_blank" href="https://api.whatsapp.com/send?phone=55<?php echo $dados['whatsapp']; ?>"><li class="fa fa-external-link-alt"></li></a></td>
           </tr>
             <?php
                 }

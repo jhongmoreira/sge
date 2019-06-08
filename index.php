@@ -92,6 +92,8 @@
         </div>
       </nav>
 
+      <br/><br/></br>
+
       <!-- Includes vão aqui -->
       <?php
         include_once("classes/pagina.php");

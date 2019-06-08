@@ -1,6 +1,6 @@
 <?php
   $banco = new BancoDeDados;
-
+  include_once("includes/funcoes.php");
   $lista = (isset($_GET['lista']))? $_GET['lista'] : 1;
   $banco->query("select * from candidatos");
   $total = $banco->linhas();
@@ -19,7 +19,7 @@
 </div>
 
 <!-- DIV opções -->
-<form action="index.php?pg=1&action=listar-todos" method="post">
+<form action="index.php?pg=7&action=listar-todos" method="post">
   <div class="row">
     <div class="col-md-2 mb-4">
       <button name="btnrelatorio" class="btn btn-warning form-control"><li class="fa fa-book"></li> Gerar Relatório</button>
@@ -29,7 +29,7 @@
 
 
 <!-- DIV buscar alunos por nome -->
-<form action="index.php?pg=1&action=busca-nome" method="post">
+<form action="index.php?pg=7&action=busca-nome" method="post">
   <div class="row mb-3">
 
     <div class="col-md-10">
@@ -91,12 +91,12 @@
             ?>
                   <!--<th scope="row"><?php /*echo $dados['id']; */?></th>-->
                   <td><?php echo $dados['nome']; ?><br/>
-                    <a class="cor-warning p-1" href="index.php?pg=3&candidato=<?php echo $dados['id']; ?>"><li class="fa fa-edit"></li></a></button>
+                    <a class="cor-warning p-1" href="index.php?pg=12&candidato=<?php echo $dados['id']; ?>"><li class="fa fa-edit"></li></a></button>
                     <a class="cor-danger p-1" href="index.php?pg=9&candidato=<?php echo $dados['id']; ?>"><li class="fa fa-trash-alt"></li></button></a>
                     <a class="cor-info p-1" href="index.php?pg=8&candidato=<?php echo $dados['id']; ?>"><li class="fa fa-eye"></li></button></a>
                   </td>
-                  <td><?php echo $dados['celular']; ?></td>
-                  <td><?php echo $dados['whatsapp']; ?>  <a alt="Abrir em Whatsapp Web" target="_blank" href="https://api.whatsapp.com/send?phone=55<?php echo $dados['whatsapp']; ?>"><li class="fa fa-external-link-alt"></li></a></td>          </tr>
+                  <td><?php echo @formatar('(%s%s) %s%s%s%s%s-%s%s%s%s', $dados['celular']); ?></td>
+                  <td><?php echo @formatar('(%s%s) %s%s%s%s%s-%s%s%s%s', $dados['whatsapp']); ?>  <a alt="Abrir em Whatsapp Web" target="_blank" href="https://api.whatsapp.com/send?phone=55<?php echo $dados['whatsapp']; ?>"><li class="fa fa-external-link-alt"></li></a></td>          </tr>
             <?php
                 }
               }else
@@ -113,7 +113,7 @@
         <?php
           for($i = 1; $i < $numPaginas + 1; $i++)
           {
-            echo "<a class='btn btn-info mb-1' href='index.php?pg=1&action=listar-todos&lista=$i'>".$i."</a> ";
+            echo "<a class='btn btn-info mb-1' href='index.php?pg=7&action=listar-todos&lista=$i'>".$i."</a> ";
           }
         ?>
       </div>

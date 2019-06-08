@@ -141,9 +141,8 @@
           <select name="grau" id="idGrau" class="form-control" required="">
               <option></option>
               <option value="BOM">Bom</option>
-              <option value="BOM">Regular</option>
-              <option value="BOM">Péssimo</option>
-              <option value="BOM">Inviável</option>
+              <option value="REG">Regular</option>
+              <option value="INV">Inviável</option>
             </select>
       </div>
     </div>

@@ -69,7 +69,7 @@
         </div>
   </div>
 
-  <div class="col-md-4 mb-2">
+  <div class="col-md-2 mb-2">
       <label class="label-detalhes mb-0" for="ativo">Ativo:</label>
         <div id="ativo">
 
@@ -84,6 +84,67 @@
 
         </div>
   </div>
+
+  <div class="col-md-2 mb-2">
+      <label class="label-detalhes mb-0" for="grau">Grau:</label>
+        <div id="grau">
+
+          <?php
+            switch ($dados["grau"]) {
+              case 'BOM':
+                echo "Bom";
+                break;
+
+              case 'REG':
+                echo "Regular";
+                break;
+
+              case 'INV':
+                echo "Inviável";
+                break;
+
+              default:
+                echo "<i>Não informado</i>";
+                break;
+            }
+          ?>
+
+        </div>
+  </div>
+</div>
+
+<!-- Linha 3 -->
+<div class="row mb-2">
+  <div class="col-md-2 mb-6">
+      <label class="label-detalhes mb-0" for="cidade">Cidade:</label>
+        <div id="cidade">
+          <?php
+            if ($dados["cidade"] == '')
+            {
+              echo "<i>Não informado</i>";
+            }else
+            {
+              echo $dados["cidade"];
+            }
+          ?>
+        </div>
+  </div>
+
+  <div class="col-md-3 mb-2">
+      <label class="label-detalhes mb-0" for="uf">UF/Estado:</label>
+        <div id="uf">
+          <?php
+            if ($dados["uf"] == '')
+            {
+              echo "<i>Não informado</i>";
+            }else
+            {
+              echo $dados["uf"];
+            }
+          ?>
+         </div>
+  </div>
+
 </div>
 
 <hr/>
