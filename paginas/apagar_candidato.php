@@ -31,19 +31,17 @@
 
 <?php
   if ($_SERVER["REQUEST_METHOD"] == 'POST')
-  {
-    $banco->query("DELETE FROM candidatos WHERE id = ".$alunoId);
+    {    
+      $banco->query("DELETE FROM candidatos WHERE id = ".$alunoId);
 
-    $total = $banco->linhas();
+      $total = $banco->linhas();
 
-    if ($total != 0)
-    {
-      echo "<div class='alert alert-info'>Candidato removido da base de dados. <i>Esta operação não pode ser desfeita</i></div>";
-      echo "<meta http-equiv='refresh' content='1;URL=index.php?pg=7'/>";
-    }else
-
-    {
-      echo "<div class='alert alert-danger'>Um erro ocorreu na tentativa de deletar o registro. Entre em contato com o Webmaster.</div>";
+      if ($total != 0)
+      {
+        echo "<div class='alert alert-info'>Candidato removido da base de dados. <i>Esta operação não pode ser desfeita</i></div>";
+        echo "<meta http-equiv='refresh' content='1;URL=index.php?pg=7'/>";
+      }else
+      {
+        echo "<div class='alert alert-danger'>Um erro ocorreu na tentativa de deletar o registro. Entre em contato com o Webmaster.</div>";
+      }
     }
-
-  }
