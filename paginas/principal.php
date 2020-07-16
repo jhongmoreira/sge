@@ -29,7 +29,7 @@
     </div>
   </div>
 
-  <!-- Número de estoque ativo -->
+  <!-- Número de estoque ativo 
   <?php
     $banco->query("SELECT * FROM candidatos where ativo = 1");
     $total = $banco->linhas();
@@ -49,7 +49,7 @@
 
   <div class="col-md-4"></div>
 
-  <!-- Número de estoque desatualizados --
+  Número de estoque desatualizados --
   <div class="col-md-4">
     <div class="jumbotron cxs-resumo div-tema-estoque-desatualizado">
       <h5><li class="fa fa-thumbs-down"></li> Candidatos Desatualizados</h5>
