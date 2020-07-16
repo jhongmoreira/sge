@@ -119,7 +119,7 @@
         $ativo = addslashes($_POST["ativo"]);
         $obs = addslashes($_POST["obs"]);
 
-        $banco->query("INSERT INTO alunos VALUES('', '$matricula', '$nome', '$curso', '$email', '$telefone', '$celular', '$whatsapp', '$obs', '$ativo')");
+        $banco->query("INSERT INTO alunos VALUES('', '$matricula', '$nome', '$curso', '$email', '$telefone', '$celular', '$whatsapp', '$ativo', '$obs')");
 
         $total = $banco->linhas();
 
