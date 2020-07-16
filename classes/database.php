@@ -12,7 +12,7 @@
       {
         try
         {
-          $host = '127.0.0.1';
+          $host = 'localhost';
           $usuario = 'root';
           $senha = '';
           $db = 'sge';
