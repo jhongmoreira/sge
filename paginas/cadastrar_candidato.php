@@ -181,7 +181,7 @@
         $cidade = addslashes($_POST["cidade"]);
         $uf = addslashes($_POST["uf"]);
 
-        $banco->query("INSERT INTO candidatos VALUES('', '$nome', '$cpf', '$curso', '$cidade', '$uf', '$email', '$telefone', '$celular', '$whatsapp', '$grau', '$ativo', '$obs')");
+        $banco->query("INSERT INTO candidatos VALUES('', '$cpf', '$nome', '$curso', '$email', '$telefone', '$celular', '$whatsapp', '$ativo', '$obs', '$grau', '$cidade', '$uf')");
 
         $total = $banco->linhas();
 
