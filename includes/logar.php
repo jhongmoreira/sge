@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST')
 
     $banco = new BancoDeDados;
     //WHERE usuario = '$usuario' and senha_md5 = '$pwd_md5' and ativo = 1 LIMIT 1
-    $banco->query("SELECT * FROM usuarios WHERE usuario = '$usuario' and senha = '$pwd_md5' and ativo = '1'");
+    $banco->query("SELECT * FROM usuarios WHERE usuario = '$usuario' and senha = '$pwd_md5'");
 
     foreach ($banco->result() as $dados) {}
 
