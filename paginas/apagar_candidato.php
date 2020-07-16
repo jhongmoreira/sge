@@ -32,6 +32,9 @@
 <?php
   if ($_SERVER["REQUEST_METHOD"] == 'POST')
     {    
+
+      $banco->query('DELETE FROM mv_estoque WHERE candidato = '.$alunoId);
+
       $banco->query("DELETE FROM candidatos WHERE id = ".$alunoId);
 
       $total = $banco->linhas();
