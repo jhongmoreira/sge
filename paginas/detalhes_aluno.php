@@ -122,7 +122,7 @@
     <tbody>
       <tr>
       <?php
-          $banco->query("SELECT * FROM mv_aluno WHERE matricula_alu = ".$dados["matricula"]);
+          $banco->query("SELECT * FROM mv_aluno WHERE matricula = ".$dados["matricula"]);
 
           $total = $banco->linhas();
 
@@ -132,8 +132,8 @@
               {
           ?>
                 <!--<th scope="row"><?php /*echo $dados['id']; */?></th>-->
-                <td><?php echo $dados['data_mv']; ?></td>
-                <td><?php echo $dados['hora_mv']; ?></td>
+                <td><?php echo $dados['data']; ?></td>
+                <td><?php echo $dados['hora']; ?></td>
                 <td><?php echo $dados['movimento']; ?></td>
         </tr>
           <?php
