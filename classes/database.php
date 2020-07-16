@@ -12,10 +12,10 @@
       {
         try
         {
-          $host = 'exatasg.com.br';
-          $usuario = 'exatasgc_sgadmin';
-          $senha = '36541287';
-          $db = 'exatasgc_sge';
+          $host = '127.0.0.1';
+          $usuario = 'root';
+          $senha = '';
+          $db = 'sge';
 
           $this->banco = $db;
           $this->pdo = new PDO("mysql:dbname=".$db.";host=".$host, $usuario, $senha);
