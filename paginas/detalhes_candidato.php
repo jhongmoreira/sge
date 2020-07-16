@@ -183,7 +183,7 @@
     <tbody>
       <tr>
       <?php
-          $banco->query("SELECT * FROM mv_estoque WHERE id_cand = '$alunoId'");
+          $banco->query("SELECT * FROM mv_estoque WHERE candidato = '$alunoId'");
 
           $total = $banco->linhas();
 
@@ -193,8 +193,8 @@
               {
           ?>
                 <!--<th scope="row"><?php /*echo $dados['id']; */?></th>-->
-                <td><?php echo $dados['data_mv']; ?></td>
-                <td><?php echo $dados['hora_mv']; ?></td>
+                <td><?php echo $dados['data']; ?></td>
+                <td><?php echo $dados['hora']; ?></td>
                 <td><?php echo $dados['movimento']; ?></td>
         </tr>
           <?php
