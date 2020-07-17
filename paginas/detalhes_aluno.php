@@ -122,7 +122,7 @@
     <tbody>
       <tr>
       <?php
-          $banco->query("SELECT * FROM mv_aluno WHERE matricula = ".$dados["matricula"]);
+          $banco->query("SELECT * FROM mv_aluno WHERE matricula = ".$dados["id"]);
 
           $total = $banco->linhas();
 
