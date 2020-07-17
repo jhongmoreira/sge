@@ -90,7 +90,10 @@
                 {
             ?>
                   <!--<th scope="row"><?php /*echo $dados['id']; */?></th>-->
-                  <td><?php echo $dados['nome']; ?></td>
+                  <td>
+                    <a class="cor-info p-1" href="index.php?pg=5&aluno=<?php echo $dados['matricula']; ?>"><li class="fa fa-eye"></li></button></a>    
+                    <?php echo $dados['nome']; ?>
+                  </td>
                   <td><?php echo $dados['data']; ?></td>
                   <td><?php echo $dados['movimento']; ?></td>
           </tr>
