@@ -52,6 +52,7 @@
       <th scope="col">Aluno</th>
       <th scope="col">Data</th>
       <th scope="col">Movimentação</th>
+      <th scope="col" class="text-center">Estado</th>
     </thead>
       <tbody>
         <tr>
@@ -91,11 +92,21 @@
             ?>
                   <!--<th scope="row"><?php /*echo $dados['id']; */?></th>-->
                   <td>
-                    <a class="cor-info p-1" href="index.php?pg=5&aluno=<?php echo $dados['matricula']; ?>"><li class="fa fa-eye"></li></button></a>    
+                    <a class="text-primary p-1" href="index.php?pg=5&aluno=<?php echo $dados['matricula']; ?>"><li class="fa fa-eye"></li></button></a>    
                     <?php echo $dados['nome']; ?>
                   </td>
                   <td><?php echo $dados['data']; ?></td>
                   <td><?php echo $dados['movimento']; ?></td>
+                  <td class="text-center">
+                  <?php 
+                    $fechado = $dados['estado']; 
+                    if ($fechado == 0){
+                      echo "<li class='text-danger fa  fa-exclamation-circle'></li>";                
+                    }else{
+                      echo "<li class='text-success fa fa-check-circle'></li>";                   
+                    }
+                  ?>
+                </td>
           </tr>
             <?php
                 }
