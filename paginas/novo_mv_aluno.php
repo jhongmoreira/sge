@@ -28,7 +28,17 @@
     <div class="col-md-2">
       <div class="form-group">
         <label for="idMatricula">Matricula:</label>
-          <input class="form-control" type="text" name="matricula" id="idMatricula" required="" pattern="[0-9]+$"/>
+          <select class="form-control" required="" name="candidato">
+            <option></option>
+            <?php
+              $banco->query("SELECT id, matricula FROM alunos");
+
+                foreach ($banco->result() as $dados)
+                {
+                  echo "<option value=".$dados['id'].">".$dados['matricula']."</option>";
+                }
+              ?>
+            </select>
       </div>
     </div>
 
