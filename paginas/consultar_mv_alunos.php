@@ -2,7 +2,7 @@
   $banco = new BancoDeDados;
   include_once("includes/funcoes.php");
   $lista = (isset($_GET['lista']))? $_GET['lista'] : 1;
-  $banco->query("select * from alunos");
+  $banco->query("SELECT * FROM mv_aluno, alunos WHERE mv_aluno.matricula = alunos.id");
   $total = $banco->linhas();
   $registros = 10;
   $numPaginas = ceil($total/$registros);
