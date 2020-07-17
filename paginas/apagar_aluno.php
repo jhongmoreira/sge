@@ -32,6 +32,7 @@
 <?php
   if ($_SERVER["REQUEST_METHOD"] == 'POST')
   {
+    $banco->query("DELETE FROM mv_aluno WHERE matricula = ".$alunoId);
     $banco->query("DELETE FROM alunos WHERE id = ".$alunoId);
 
     $total = $banco->linhas();
