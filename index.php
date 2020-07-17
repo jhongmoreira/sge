@@ -23,9 +23,6 @@
     <script src="bootstrap/fontawesome/js/fontawesome.js"></script>
     <script src="bootstrap/fontawesome/js/regular.js"></script>
     <script src="bootstrap/fontawesome/js/solid.js"></script>
-
-
-
   </head>
   <!-- Corpo do site -->
   <body>
