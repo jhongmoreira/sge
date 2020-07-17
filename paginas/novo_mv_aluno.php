@@ -28,7 +28,7 @@
     <div class="col-md-2">
       <div class="form-group">
         <label for="idMatricula">Matricula:</label>
-          <select class="form-control" required="" name="matricula">
+          <select class="select-alunos form-control" required="" name="matricula">
             <option></option>
             <?php
               $banco->query("SELECT id, matricula FROM alunos");
@@ -100,3 +100,4 @@
     ?>
   </div>
 </div>
+

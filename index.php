@@ -23,6 +23,15 @@
     <script src="bootstrap/fontawesome/js/fontawesome.js"></script>
     <script src="bootstrap/fontawesome/js/regular.js"></script>
     <script src="bootstrap/fontawesome/js/solid.js"></script>
+    <!--Select2-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script>
+$(document).ready(function() {
+    $('.select-alunos').select2();
+});
+</script>
   </head>
   <!-- Corpo do site -->
   <body>
@@ -101,6 +110,5 @@
 
   </body>
   <!-- Arquivos jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
   </html>
