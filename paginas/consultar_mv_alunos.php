@@ -18,13 +18,25 @@
 </div>
 
 <!-- DIV opções -->
-<form action="index.php?pg=1&action=listar-todos" method="post">
   <div class="row">
     <div class="col-md-2 mb-4">
-      <button name="btnrelatorio" class="btn btn-warning form-control"><li class="fa fa-book"></li> Gerar Relatório</button>
+      <form action="index.php?pg=13&action=listar-todos" method="post">
+            <button name="btnrelatorio" class="btn btn-primary form-control"><li class="fa fa-list"></li> Listar Todos</button>
+      </form>
+    </div>
+
+    <div class="col-md-2 mb-4">
+      <form action="index.php?pg=13&action=listar-abertos" method="post">
+            <button name="btnsomenteabertos" class="btn btn-danger form-control"><li class="fa fa-exclamation-circle"></li> Atendimentos Abertos</button>
+      </form>
+    </div>
+
+    <div class="col-md-2 mb-4">
+      <form action="index.php?pg=13&action=listar-fechados" method="post">
+            <button name="btnsomentefechados" class="btn btn-success form-control"><li class="fa fa-check-circle"></li> Atendimentos Fechados</button>
+      </form>
     </div>
   </div>
-</form>
 
 
 <!-- DIV buscar alunos por nome -->
@@ -68,6 +80,16 @@
           if ($acao == 'listar-todos')
           {
             $banco->query("SELECT * FROM alunos, mv_aluno WHERE alunos.id = mv_aluno.matricula  ORDER BY mv_aluno.id limit $inicio, $registros");
+          }
+
+          if ($acao == 'listar-abertos')
+          {
+            $banco->query("SELECT * FROM alunos, mv_aluno WHERE alunos.id = mv_aluno.matricula AND estado = 0 ORDER BY mv_aluno.id");
+          }
+
+          if ($acao == 'listar-fechados')
+          {
+            $banco->query("SELECT * FROM alunos, mv_aluno WHERE alunos.id = mv_aluno.matricula AND estado = 1 ORDER BY mv_aluno.id");
           }
 
           if ($acao == 'busca-nome')
