@@ -56,7 +56,19 @@
       </div>
     </div>
 
-    <div class="col-md-6"></div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="resolvido">Resolvido:</label>
+          <select name="resolvido" class="form-control" required="">
+                <option></option>
+                <option value="1">Sim</option>
+                <option value="0">Não</option>
+          </select>
+      </div>
+    </div>
+
+    <div class="col-md-4"></div>
+    </div>
 
   </div>
 
@@ -83,8 +95,9 @@
         $data = addslashes($_POST["data"]);
         $hora = addslashes($_POST["hora"]);
         $movimento = addslashes($_POST["mv_alu"]);
+        $estado = addslashes($_POST["resolvido"]);
 
-        $banco->query("INSERT INTO mv_aluno VALUES('', '$matricula', '$data', '$hora', '$movimento')");
+        $banco->query("INSERT INTO mv_aluno VALUES('', '$matricula', '$data', '$hora', '$movimento', '$estado')");
 
         $total = $banco->linhas();
 
