@@ -7,7 +7,6 @@
   $registros = 10;
   $numPaginas = ceil($total/$registros);
   $inicio = ($registros*$lista)-$registros;
-
 ?>
 
 <!-- Título -->
@@ -89,6 +88,7 @@
               {
                 foreach ($banco->result() as $dados)
                 {
+                  $id_atendimento = $dados['id'];
             ?>
                   <!--<th scope="row"><?php /*echo $dados['id']; */?></th>-->
                   <td>
@@ -101,7 +101,7 @@
                   <?php 
                     $fechado = $dados['estado']; 
                     if ($fechado == 0){
-                      echo "<li class='text-danger fa  fa-exclamation-circle'></li>";                
+                      echo "<a href='index.php?pg=14&atendimento=$id_atendimento'><li class='text-danger fa  fa-exclamation-circle'></li></a>";                
                     }else{
                       echo "<li class='text-success fa fa-check-circle'></li>";                   
                     }
