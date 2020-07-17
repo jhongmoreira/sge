@@ -76,6 +76,10 @@
           case 13:
             include "./paginas/consultar_mv_alunos.php";
             break;
+
+          case 14:
+            include "./paginas/baixa_mv_aluno.php";
+            break;
         }
 
       }
