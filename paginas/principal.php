@@ -47,5 +47,23 @@
     </div>
   </div>
 
-  <div class="col-md-4"></div>
+  <!-- Número de alunos ativos -->
+  <?php
+    $banco->query("SELECT * FROM mv_aluno");
+    $total = $banco->linhas();
+  ?>
+  <div class="col-md-4">
+    <div class="jumbotron cxs-resumo div-tema-padrao">
+      <h5><li class="fa fa-user"></li> Alunos matriculados</h5>
+      <span><?php echo $total; ?> movimentações de alunos</span>
+      <div class="row mt-2">
+        <div class="col-md-7"></div>
+        <div class="col-md-5">
+          <a href="index.php?pg=1"><button class="form-control btn btn-detalhes-matriculados"><li class="fa fa-plus"></li> Detalhes</button></button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3"></div>
 </div>
