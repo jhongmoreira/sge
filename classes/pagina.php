@@ -72,6 +72,10 @@
           case 12:
             include "./paginas/editar_candidato.php";
             break;
+
+          case 13:
+            include "./paginas/consultar_mv_alunos.php";
+            break;
         }
 
       }
