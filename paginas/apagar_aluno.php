@@ -10,6 +10,7 @@
 <div class="row p-2">
   <div class="col-md-12 cor-txt-padrao">
     <h5><li class="fa fa-user-minus"></li> Remover aluno <?php echo $dados['nome']; ?> dos registros?</h5>
+    <span>Esta ação também removerá as <b>movimentações</b> cadastradas para este contato.</span>
     <hr/>
   </div>
 </div>
