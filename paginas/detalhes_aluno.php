@@ -118,6 +118,7 @@
     <th scope="col">Data</th>
     <th scope="col">Hora</th>
     <th scope="col">Movimentação</th>
+    <th scope="col" class="text-center">Estado</th>
   </thead>
     <tbody>
       <tr>
@@ -135,6 +136,16 @@
                 <td><?php echo $dados['data']; ?></td>
                 <td><?php echo $dados['hora']; ?></td>
                 <td><?php echo $dados['movimento']; ?></td>
+                <td class="text-center">
+                  <?php 
+                    $fechado = $dados['estado']; 
+                    if ($fechado == 0){
+                      echo "<li class='text-danger fa  fa-exclamation-circle'></li>";                
+                    }else{
+                      echo "<li class='text-success fa fa-check-circle'></li>";                   
+                    }
+                  ?>
+                </td>
         </tr>
           <?php
               }
