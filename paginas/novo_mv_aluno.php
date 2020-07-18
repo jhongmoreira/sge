@@ -68,11 +68,9 @@
     </div>
 
     <div class="col-md-4"></div>
-    </div>
-
   </div>
 
-  <hr/>
+ <hr/>
 
   <!-- Linha 3 -->
   <div class="row">
